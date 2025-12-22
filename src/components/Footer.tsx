@@ -16,10 +16,20 @@ export default function Footer() {
             <p className="text-neutral-500 text-sm leading-relaxed mb-4">
               Global leaders in chemical, textile, and engineering trade. Building bridges since 1985.
             </p>
-            <div className="text-neutral-400 text-sm leading-relaxed">
-              <p>No. 2, 86A Pearl Haven, Chapel Rd,</p>
-              <p>Near Leelavati Hospital,</p>
-              <p>Bandra (W), Mumbai, 400050</p>
+            <div className="text-neutral-400 text-sm leading-relaxed space-y-4">
+              <div>
+                <p className="text-neutral-300 font-semibold mb-1">Registered Address</p>
+                <p>No. 2, 86 A Pearl Heaven, Chapel Road,</p>
+                <p>Bandra (West),</p>
+                <p>Mumbai – 400050, India</p>
+              </div>
+              <div>
+                <p className="text-neutral-300 font-semibold mb-1">Office Address</p>
+                <p>Ground Floor, Office No. 40, Building No. 5,</p>
+                <p>Ashirwad Industrial Premises Co‑operative Society Ltd.,</p>
+                <p>Ram Mandir Road,</p>
+                <p>Mumbai – 400104, India</p>
+              </div>
             </div>
           </div>
 
@@ -27,10 +37,10 @@ export default function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-widest text-white mb-6 font-bold">Company</h4>
             <ul className="space-y-4 text-neutral-400 text-sm">
-              <li><a href="#" className="hover:text-gold-500 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">Leadership</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">News & Press</a></li>
+              <li><a href="#about" className="hover:text-gold-500 transition-colors">About Us</a></li>
+              <li><a href="#leadership" className="hover:text-gold-500 transition-colors">Leadership</a></li>
+              <li><a href="/sunrise-cares" className="hover:text-gold-500 transition-colors">Sunrise Cares</a></li>
+              <li><a href="#contact" className="hover:text-gold-500 transition-colors">Contact</a></li>
             </ul>
           </div>
 

@@ -27,10 +27,10 @@ export default function Home() {
   ];
 
   const certifications: Certification[] = [
-    { id: 'iso', title: 'ISO 9001:2015', desc: 'Quality Management Systems certified for operational excellence.' },
-    { id: 'star', title: 'Star Export House', desc: 'Government of India recognized status for consistent trade performance.' },
-    { id: 'reach', title: 'REACH Compliant', desc: 'Adhering to EU regulations for chemical substance safety and registration.' },
-    { id: 'oeko', title: 'OEKO-TEX® Standard', desc: 'Ensuring textile products are free from harmful substances.' }
+    { id: 'reach', title: 'REACH-Compliant', desc: 'Adhering to EU regulations for chemical substance safety and registration.' },
+    { id: 'international', title: 'International-Grade Quality', desc: 'Meeting the highest global standards for quality and excellence.' },
+    { id: 'export', title: 'Export-Ready Specifications', desc: 'Products manufactured to meet international export requirements and standards.' },
+    { id: 'batch', title: 'Controlled Batch Consistency', desc: 'Ensuring uniform quality and specifications across all production batches.' }
   ];
 
   const leaders: Leader[] = [

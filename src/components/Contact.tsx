@@ -34,8 +34,18 @@ export default function Contact() {
 
           <div className="space-y-10">
             <div>
-              <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Address</h4>
-              <p className="text-2xl font-serif text-neutral-800">No. 2, 86A Pearl Haven, Chapel Rd, Near Leelavati Hospital, Bandra (W), Mumbai, 400050</p>
+              <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Registered Address</h4>
+              <p className="text-lg font-serif text-neutral-800 mb-2">No. 2, 86 A Pearl Heaven, Chapel Road,</p>
+              <p className="text-lg font-serif text-neutral-800 mb-2">Bandra (West),</p>
+              <p className="text-lg font-serif text-neutral-800 mb-3">Mumbai – 400050, India</p>
+              <p className="text-sm text-neutral-500 font-light italic">Kindly direct all official correspondence and documentation to this address.</p>
+            </div>
+            <div>
+              <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Office Address</h4>
+              <p className="text-lg font-serif text-neutral-800 mb-2">Ground Floor, Office No. 40, Building No. 5,</p>
+              <p className="text-lg font-serif text-neutral-800 mb-2">Ashirwad Industrial Premises Co‑operative Society Ltd.,</p>
+              <p className="text-lg font-serif text-neutral-800 mb-2">Ram Mandir Road,</p>
+              <p className="text-lg font-serif text-neutral-800">Mumbai – 400104, India</p>
             </div>
             <div>
               <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Email Us</h4>
