@@ -17,10 +17,11 @@ export default function Home() {
   useScrollReveal();
 
   const navLinks: NavLink[] = [
-    { label: 'Company', href: '#about' },
+    { label: 'Company', href: '#about' }, // Includes Compliance under Legal previously, now moving?
     { label: 'Leadership', href: '#leadership' },
+    { label: 'Sunrise Cares', href: '/sunrise-cares' },
     { label: 'Divisions', href: '#divisions' },
-    { label: 'Network', href: '#network' },
+    { label: 'Strategic Presence', href: '#network' },
     { label: 'Quality', href: '#quality' },
     // { label: 'Sustainability', href: '#sustainability' },
     { label: 'Contact', href: '#contact' },

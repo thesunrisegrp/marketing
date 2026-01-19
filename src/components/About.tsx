@@ -21,7 +21,7 @@ export default function About() {
               Every consignment reflects our commitment to quality, regulatory standards, and service excellence. More than just exports, we deliver confidence in trade, bridging domestic and international markets with transparency, dependability, and shared prosperity.
             </p>
           </div>
-          
+
           <div className="mt-12 flex gap-12">
             <div>
               <h3 className="text-4xl font-serif text-neutral-900">50+</h3>
@@ -36,12 +36,15 @@ export default function About() {
 
         {/* Image Composition */}
         <div className="order-1 lg:order-2 relative reveal">
-          <div className="relative h-[600px] w-full overflow-hidden">
+          {/* <div className="relative h-[600px] w-full overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" 
               alt="Modern Architecture" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
             />
+          </div> */}
+          <div className="relative h-[600px] w-full overflow-hidden bg-neutral-100 flex items-center justify-center">
+            <span className="text-neutral-400 italic">Image coming soon</span>
           </div>
           {/* Floating Badge */}
           {/* <div className="absolute -bottom-10 -left-10 bg-gold-500 p-8 hidden md:block">

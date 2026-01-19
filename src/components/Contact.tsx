@@ -13,15 +13,15 @@ export default function Contact() {
     e.preventDefault();
     setHasSent(true);
     setTimeout(() => {
-        setHasSent(false);
-        setMessage('');
+      setHasSent(false);
+      setMessage('');
     }, 5000);
   };
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-white relative">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
-        
+
         {/* Left: Info */}
         <div className="reveal">
           <span className="text-gold-600 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Get in Touch</span>
@@ -42,20 +42,26 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Office Address</h4>
-              <p className="text-lg font-serif text-neutral-800 mb-2">Ground Floor, Office No. 40, Building No. 5,</p>
+              <p className="text-lg font-serif text-neutral-800 mb-2">Ground Floor, Building No. 5,</p>
               <p className="text-lg font-serif text-neutral-800 mb-2">Ashirwad Industrial Premises Co‑operative Society Ltd.,</p>
               <p className="text-lg font-serif text-neutral-800 mb-2">Ram Mandir Road,</p>
               <p className="text-lg font-serif text-neutral-800">Mumbai – 400104, India</p>
             </div>
             <div>
-              <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Email Us</h4>
-              <a href="mailto:info@thesunrisegrp.com" className="text-2xl font-serif text-neutral-800 hover:text-gold-600 transition-colors border-b border-transparent hover:border-gold-600">
+              <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">General Inquiries</h4>
+              <a href="mailto:info@thesunrisegrp.com" className="text-2xl font-serif text-neutral-800 hover:text-gold-600 transition-colors border-b border-transparent hover:border-gold-600 block mb-1">
                 info@thesunrisegrp.com
               </a>
             </div>
             <div>
+              <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Queries & Updates</h4>
+              <a href="mailto:abhishek@thesunrisegrp.com" className="text-2xl font-serif text-neutral-800 hover:text-gold-600 transition-colors border-b border-transparent hover:border-gold-600">
+                abhishek@thesunrisegrp.com
+              </a>
+            </div>
+            <div>
               <h4 className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Call Us</h4>
-              <p className="text-2xl font-serif text-neutral-800">+91-9769022665</p>
+              <p className="text-2xl font-serif text-neutral-800">+91 8454847259</p>
             </div>
           </div>
         </div>
@@ -67,7 +73,7 @@ export default function Contact() {
               <div>
                 <label className="block text-xs uppercase tracking-wider text-neutral-500 mb-2">I am interested in</label>
                 <div className="relative">
-                  <select 
+                  <select
                     value={selectedDivision}
                     onChange={(e) => setSelectedDivision(e.target.value)}
                     className="w-full bg-transparent border-b border-neutral-300 text-neutral-900 py-3 text-lg font-serif focus:border-gold-500 focus:outline-none appearance-none rounded-none"
@@ -95,7 +101,7 @@ export default function Contact() {
               </div>
 
               <div className="pt-6">
-                <button 
+                <button
                   type="submit"
                   className="w-full bg-neutral-900 text-white py-5 px-8 font-bold tracking-[0.2em] uppercase hover:bg-gold-600 transition-colors flex items-center justify-between group"
                 >
@@ -106,11 +112,11 @@ export default function Contact() {
             </form>
           ) : (
             <div className="h-full min-h-[400px] flex flex-col items-center justify-center text-center animate-fade-in-up">
-               <div className="w-20 h-20 rounded-full bg-gold-50 flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-10 h-10 text-gold-600" />
-               </div>
-               <h3 className="text-3xl font-serif text-neutral-900 mb-3">Inquiry Sent</h3>
-               <p className="text-neutral-500 max-w-xs">Thank you for reaching out. A representative will contact you shortly.</p>
+              <div className="w-20 h-20 rounded-full bg-gold-50 flex items-center justify-center mb-6">
+                <CheckCircle2 className="w-10 h-10 text-gold-600" />
+              </div>
+              <h3 className="text-3xl font-serif text-neutral-900 mb-3">Inquiry Sent</h3>
+              <p className="text-neutral-500 max-w-xs">Thank you for reaching out. A representative will contact you shortly.</p>
             </div>
           )}
         </div>
