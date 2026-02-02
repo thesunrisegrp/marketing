@@ -14,6 +14,7 @@ export interface Certification {
 export interface NavLink {
   label: string;
   href: string;
+  children?: NavLink[];
 }
 
 export enum DivisionType {

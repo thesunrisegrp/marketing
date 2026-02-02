@@ -17,17 +17,9 @@ export default function Leadership({ leaders }: LeadershipProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {leaders.map((leader, index) => (
             <div key={index} className="group reveal" style={{ transitionDelay: `${index * 100}ms` }}>
-              <div className="relative overflow-hidden mb-6 aspect-[3/4]">
-                <img 
-                  src={leader.image} 
-                  alt={leader.name}
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-900/10 transition-all duration-300"></div>
-              </div>
               <h3 className="text-xl font-serif text-neutral-900 mb-1">{leader.name}</h3>
               <p className="text-xs uppercase tracking-widest text-gold-600 font-bold mb-3">{leader.role}</p>
-              <p className="text-neutral-500 font-light text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-2 group-hover:translate-y-0">
+              <p className="text-neutral-500 font-light text-sm leading-relaxed">
                 {leader.bio}
               </p>
             </div>

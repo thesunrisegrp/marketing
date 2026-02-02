@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="py-24 lg:py-32 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         {/* Text Content */}
-        <div className="order-2 lg:order-1 reveal">
+        <div id="mission" className="order-2 lg:order-1 reveal">
           <span className="text-gold-600 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Our Story & Mission</span>
           <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8 leading-tight">
             Our Legacy of Excellence

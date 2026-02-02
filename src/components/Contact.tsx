@@ -29,7 +29,7 @@ export default function Contact() {
             Ready to Expand Your <span className="italic text-gold-600">Global Reach?</span>
           </h2>
           <p className="text-xl text-neutral-500 font-light mb-12 max-w-md">
-            Partner with The Sunrise Group for reliable sourcing, logistics, and market expertise.
+            Partner with The Sunrise Group for reliable exports, logistics, and market expertise.
           </p>
 
           <div className="space-y-10">
@@ -73,7 +73,7 @@ export default function Contact() {
                     className="w-full bg-transparent border-b border-neutral-300 text-neutral-900 py-3 text-lg font-serif focus:border-gold-500 focus:outline-none appearance-none rounded-none"
                   >
                     <option value={DivisionType.CHEMICALS}>Chemical Solutions</option>
-                    <option value={DivisionType.TEXTILE}>Textile Sourcing</option>
+                    <option value={DivisionType.TEXTILE}>Textile Exports</option>
                     <option value={DivisionType.ENGINEERING}>Engineering Goods</option>
                     <option value="General">General Partnership</option>
                   </select>

@@ -79,12 +79,12 @@ export default function Divisions() {
   const activeData = divisions.find(d => d.id === activeDivision)!;
 
   return (
-    <section id="divisions" className="py-24 bg-neutral-50 border-t border-neutral-200">
+    <section id="businesses" className="py-24 bg-neutral-50 border-t border-neutral-200">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between reveal">
           <div>
              <span className="block text-gold-600 font-bold tracking-[0.2em] text-sm uppercase mb-3">Our Expertise</span>
-             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">Divisions of Excellence</h2>
+             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">Businesses</h2>
           </div>
           <p className="text-neutral-500 max-w-md mt-4 md:mt-0 font-light text-lg">
              We operate at the intersection of industry and innovation, delivering specialized solutions across three core sectors.

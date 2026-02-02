@@ -17,9 +17,11 @@ export default function Home() {
   useScrollReveal();
 
   const navLinks: NavLink[] = [
-    { label: 'Company', href: '#about' },
-    { label: 'Leadership', href: '#leadership' },
-    { label: 'Divisions', href: '#divisions' },
+    { label: 'About Us', href: '#about', children: [
+      { label: 'Mission', href: '#mission' },
+      { label: 'Team', href: '#leadership' }
+    ]},
+    { label: 'Businesses', href: '#businesses' },
     { label: 'Network', href: '#network' },
     { label: 'Quality', href: '#quality' },
     // { label: 'Sustainability', href: '#sustainability' },

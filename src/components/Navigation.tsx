@@ -11,6 +11,7 @@ interface NavigationProps {
 export default function Navigation({ navLinks }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,14 +45,34 @@ export default function Navigation({ navLinks }: NavigationProps) {
         {/* Desktop Nav */}
         <div className={`hidden lg:flex items-center gap-10 ${isScrolled ? 'text-neutral-800' : 'text-white'}`}>
           {navLinks.map((link) => (
-            <a 
-              key={link.label} 
-              href={link.href}
-              className="text-[11px] uppercase tracking-[0.2em] font-bold hover:text-gold-500 transition-colors relative group"
+            <div
+              key={link.label}
+              className="relative"
+              onMouseEnter={() => link.children && setHoveredLink(link.label)}
+              onMouseLeave={() => setHoveredLink(null)}
             >
-              {link.label}
-              <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
+              <a 
+                href={link.href}
+                className="text-[11px] uppercase tracking-[0.2em] font-bold hover:text-gold-500 transition-colors relative group"
+              >
+                {link.label}
+                <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-gold-500 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              {link.children && hoveredLink === link.label && (
+                <div className="absolute top-full left-0 mt-2 bg-white shadow-lg min-w-[180px] py-2 z-50">
+                  {link.children.map((child) => (
+                    <a
+                      key={child.label}
+                      href={child.href}
+                      className="block px-6 py-3 text-[11px] uppercase tracking-[0.2em] font-bold text-neutral-800 hover:text-gold-500 hover:bg-neutral-50 transition-colors"
+                      onClick={() => setHoveredLink(null)}
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           <a 
             href="#contact" 
@@ -74,14 +95,29 @@ export default function Navigation({ navLinks }: NavigationProps) {
       <div className={`fixed inset-0 bg-white z-40 transition-transform duration-500 ease-in-out lg:hidden flex items-center justify-center ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col gap-8 text-center">
           {navLinks.map((link) => (
-            <a 
-              key={link.label} 
-              href={link.href}
-              className="text-2xl font-serif text-neutral-900 hover:text-gold-600 transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.label}
-            </a>
+            <div key={link.label}>
+              <a 
+                href={link.href}
+                className="text-2xl font-serif text-neutral-900 hover:text-gold-600 transition-colors block"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+              {link.children && (
+                <div className="flex flex-col gap-4 mt-4">
+                  {link.children.map((child) => (
+                    <a
+                      key={child.label}
+                      href={child.href}
+                      className="text-lg font-serif text-neutral-600 hover:text-gold-600 transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>
