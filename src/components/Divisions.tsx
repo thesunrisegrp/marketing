@@ -32,7 +32,7 @@ const divisions: DivisionData[] = [
   {
     id: DivisionType.TEXTILE,
     title: "Yarns & Textiles",
-    description: "Connecting global fashion markets with premium raw materials. From sustainable organic cottons to high-performance synthetic blends, we bridge the gap between mills and manufacturers.",
+    description: "Connecting global fashion markets with raw materials. From sustainable organic cottons to high-performance synthetic blends, we bridge the gap between mills and manufacturers.",
     capabilities: ["Organic Cotton Yarns", "Performance Fabrics", "Sustainable Dyes", "Technical Textiles"],
     image: "https://images.unsplash.com/photo-1630920501459-f3e99320c4a5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     iconName: "anchor",
@@ -87,7 +87,7 @@ export default function Divisions() {
              <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">Businesses</h2>
           </div>
           <p className="text-neutral-500 max-w-md mt-4 md:mt-0 font-light text-lg">
-            We operate at the intersection of industry and innovation, delivering specialized solutions across three core sectors.
+            We operate at the intersection of industry and innovation, delivering specialized goods across three core sectors.
           </p>
         </div>
 

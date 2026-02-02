@@ -35,7 +35,7 @@ export default function About() {
         </div>
 
         {/* Image Composition */}
-        <div className="order-1 lg:order-2 relative reveal">
+        <div className="order-1 lg:order-2 relative reveal hidden md:block">
           <div className="relative h-[600px] w-full overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" 

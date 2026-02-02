@@ -19,11 +19,12 @@ export default function Home() {
   const navLinks: NavLink[] = [
     { label: 'About Us', href: '#about', children: [
       { label: 'Mission', href: '#mission' },
-      { label: 'Team', href: '#leadership' }
+      { label: 'Leadership', href: '#leadership' }
     ]},
     { label: 'Businesses', href: '#businesses' },
     { label: 'Network', href: '#network' },
-    { label: 'Quality', href: '#quality' },
+    { label: 'Compliance', href: '#quality' },
+    { label: 'Sunrise Cares', href: '/sunrise-cares' },
     // { label: 'Sustainability', href: '#sustainability' },
     { label: 'Contact', href: '#contact' },
   ];

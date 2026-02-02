@@ -12,11 +12,10 @@ export default function Hero() {
 
       <div className="relative z-20 text-center px-6 max-w-6xl mx-auto flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-[1.1] animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-          Bridging Worlds.<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-200 to-gold-500">Mastering Trade.</span>
+          Growing together
         </h1>
         <p className="text-lg md:text-xl text-neutral-300 font-light max-w-2xl mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-          The Sunrise Group orchestrates the seamless flow of high-grade chemicals, premium textiles, and engineering solutions across international borders.
+          The Sunrise Group supplies chemicals, textiles, and engineering goods across domestic and international markets.
         </p>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '600ms' }}>

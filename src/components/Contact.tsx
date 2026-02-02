@@ -5,17 +5,47 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { DivisionType } from '../types';
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [selectedDivision, setSelectedDivision] = useState<string>(DivisionType.CHEMICALS);
   const [hasSent, setHasSent] = useState(false);
+  const [result, setResult] = useState('');
 
-  const handleSend = (e: React.FormEvent) => {
-    e.preventDefault();
-    setHasSent(true);
-    setTimeout(() => {
-      setHasSent(false);
-      setMessage('');
-    }, 5000);
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult('Sending....');
+    
+    const formData = new FormData(event.currentTarget);
+    formData.append('access_key', 'bd5334d8-3860-4e87-b307-eecaffffb4c7');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        setResult('Form Submitted Successfully');
+        setHasSent(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+        setSelectedDivision(DivisionType.CHEMICALS);
+        (event.target as HTMLFormElement).reset();
+        setTimeout(() => {
+          setHasSent(false);
+          setResult('');
+        }, 5000);
+      } else {
+        setResult('Error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setResult('Error');
+    }
   };
 
   return (
@@ -26,11 +56,8 @@ export default function Contact() {
         <div className="reveal">
           <span className="text-gold-600 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Get in Touch</span>
           <h2 className="text-4xl md:text-6xl font-serif text-neutral-900 mb-8 leading-tight">
-            Ready to Expand Your <span className="italic text-gold-600">Global Reach?</span>
+            Get in touch
           </h2>
-          <p className="text-xl text-neutral-500 font-light mb-12 max-w-md">
-            Partner with The Sunrise Group for reliable exports, logistics, and market expertise.
-          </p>
 
           <div className="space-y-10">
             <div>
@@ -63,16 +90,43 @@ export default function Contact() {
         {/* Right: Form */}
         <div className="bg-neutral-50 p-10 lg:p-12 reveal">
           {!hasSent ? (
-            <form onSubmit={handleSend} className="space-y-8">
+            <form onSubmit={onSubmit} className="space-y-8">
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-neutral-500 mb-2">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                  className="w-full bg-transparent border-b border-neutral-300 text-neutral-900 py-3 text-lg font-serif focus:border-gold-500 focus:outline-none placeholder-neutral-300 font-light"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-neutral-500 mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your.email@example.com"
+                  className="w-full bg-transparent border-b border-neutral-300 text-neutral-900 py-3 text-lg font-serif focus:border-gold-500 focus:outline-none placeholder-neutral-300 font-light"
+                  required
+                />
+              </div>
+
               <div>
                 <label className="block text-xs uppercase tracking-wider text-neutral-500 mb-2">I am interested in</label>
                 <div className="relative">
                   <select
+                    name="division"
                     value={selectedDivision}
                     onChange={(e) => setSelectedDivision(e.target.value)}
                     className="w-full bg-transparent border-b border-neutral-300 text-neutral-900 py-3 text-lg font-serif focus:border-gold-500 focus:outline-none appearance-none rounded-none"
                   >
-                    <option value={DivisionType.CHEMICALS}>Chemical Solutions</option>
+                    <option value={DivisionType.CHEMICALS}>Chemical Goods</option>
                     <option value={DivisionType.TEXTILE}>Textile Exports</option>
                     <option value={DivisionType.ENGINEERING}>Engineering Goods</option>
                     <option value="General">General Partnership</option>
@@ -86,6 +140,7 @@ export default function Contact() {
               <div>
                 <label className="block text-xs uppercase tracking-wider text-neutral-500 mb-2">Your Message</label>
                 <textarea
+                  name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us briefly about your requirements..."
@@ -94,12 +149,19 @@ export default function Contact() {
                 />
               </div>
 
+              {result && (
+                <div className={`text-sm ${result.includes('Successfully') ? 'text-gold-600' : 'text-red-600'}`}>
+                  {result}
+                </div>
+              )}
+
               <div className="pt-6">
                 <button
                   type="submit"
-                  className="w-full bg-neutral-900 text-white py-5 px-8 font-bold tracking-[0.2em] uppercase hover:bg-gold-600 transition-colors flex items-center justify-between group"
+                  disabled={result === 'Sending....'}
+                  className="w-full bg-neutral-900 text-white py-5 px-8 font-bold tracking-[0.2em] uppercase hover:bg-gold-600 transition-colors flex items-center justify-between group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Inquiry
+                  {result === 'Sending....' ? 'Sending...' : 'Send Inquiry'}
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                 </button>
               </div>

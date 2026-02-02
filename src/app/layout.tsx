@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     default: "The Sunrise Group | Global Trade Leaders Since 1985",
     template: "%s | The Sunrise Group",
   },
-  description: "The Sunrise Group is a government-recognized Star Export House specializing in international trade of high-grade chemicals, premium textiles, and engineering solutions. Operating across 42+ countries with 35+ years of excellence.",
+  description: "The Sunrise Group is a government-recognized Star Export House specializing in international and domestic trade of chemicals, textiles, and engineering goods. Operating across 42+ countries with 35+ years of excellence.",
   keywords: [
     "Sunrise Group",
     "Star Export House",
     "international trade",
     "chemical exports",
     "textile exports",
-    "engineering solutions",
+    "engineering goods",
     "global trade",
     "export company India",
     "REACH-Compliant",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     url: "https://trade.thesunrisegrp.com",
     siteName: "The Sunrise Group",
     title: "The Sunrise Group | Global Trade Leaders Since 1985",
-    description: "Government-recognized Star Export House specializing in chemicals, textiles, and engineering solutions. Operating across 42+ countries with 35+ years of excellence.",
+    description: "Government-recognized Star Export House specializing in chemicals, textiles, and engineering goods. Operating across 42+ countries with 35+ years of excellence.",
     images: [
       {
         url: "/company.png",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Sunrise Group | Global Trade Leaders Since 1985",
-    description: "Government-recognized Star Export House specializing in chemicals, textiles, and engineering solutions. Operating across 42+ countries.",
+    description: "Government-recognized Star Export House specializing in chemicals, textiles, and engineering goods. Operating across 42+ countries.",
     images: ["/company.png"],
     creator: "@sunrisegroup",
   },

@@ -11,7 +11,7 @@ export default function Footer() {
                 alt="The Sunrise Group Logo"
                 className="h-8 w-auto"
               />
-              <span className="font-serif text-lg tracking-widest font-bold">SUNRISE</span>
+              <span className="font-serif text-lg tracking-widest font-bold">THE SUNRISE GROUP</span>
             </div>
             <p className="text-neutral-500 text-sm leading-relaxed mb-4">
               Global leaders in chemical, textile, and engineering trade. Building bridges since 1985.
