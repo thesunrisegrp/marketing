@@ -31,13 +31,13 @@ export default function Navigation({ navLinks }: NavigationProps) {
     >
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-4 group cursor-pointer z-50">
+        <a href="#" className="flex items-center gap-2 md:gap-4 group cursor-pointer z-50">
           <img 
             src="/company.png" 
             alt="The Sunrise Group Logo" 
-            className="h-10 w-auto transition-opacity duration-300"
+            className="h-8 md:h-10 w-auto transition-opacity duration-300"
           />
-          <span className={`font-serif text-xl tracking-widest font-bold hidden md:block transition-colors duration-300 ${isScrolled || mobileMenuOpen ? 'text-neutral-900' : 'text-white'}`}>
+          <span className={`font-serif text-sm md:text-xl tracking-widest font-bold transition-colors duration-300 ${isScrolled || mobileMenuOpen ? 'text-neutral-900' : 'text-white'}`}>
             THE SUNRISE GROUP
           </span>
         </a>
