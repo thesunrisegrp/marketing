@@ -21,7 +21,7 @@ export default function About() {
               Every consignment reflects our commitment to quality, regulatory standards, and service excellence. More than just exports, we deliver confidence in trade, bridging domestic and international markets with transparency, dependability, and shared prosperity.
             </p>
           </div>
-          
+
           <div className="mt-12 flex gap-12">
             <div>
               <h3 className="text-4xl font-serif text-neutral-900">50+</h3>

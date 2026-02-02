@@ -2,12 +2,12 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-neutral-900">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
         <img 
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" 
           alt="Global Connectivity" 
           className="w-full h-full object-cover animate-fade-in scale-105"
         />
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
       </div>
 
       <div className="relative z-20 text-center px-6 max-w-6xl mx-auto flex flex-col items-center">

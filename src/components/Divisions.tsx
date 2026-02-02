@@ -16,15 +16,15 @@ const divisions: DivisionData[] = [
       {
         title: "Products",
         items: [
-            "Copper Phthalocyanine Crude", "Pigment Powders", "Industrial Solvents",
-            "Food Colours", "Cosmetic Pigments", "Fluorescent Dyes",
-            "Lake Colours", "Inkjet Dyes", "Acid Dyes",
-            "Direct Dyes", "Solvent Dyes", "Reactive Dyes",
-            "Leather Dyes", "Basic Dyes", "Optical Brighteners",
-            "Reactive Dyes (Vinyl Sulphone)", "Dye Intermediates", "Pigment Emulsions",
-            "Fine Chemicals", "Pharmaceutical Intermediates", "Specialty Solvents",
-            "Laboratory Chemicals", "Biological Stains", "Dehydrated Culture Media",
-            "Analytical Reagents"
+          "Copper Phthalocyanine Crude", "Pigment Powders", "Industrial Solvents",
+          "Food Colours", "Cosmetic Pigments", "Fluorescent Dyes",
+          "Lake Colours", "Inkjet Dyes", "Acid Dyes",
+          "Direct Dyes", "Solvent Dyes", "Reactive Dyes",
+          "Leather Dyes", "Basic Dyes", "Optical Brighteners",
+          "Reactive Dyes (Vinyl Sulphone)", "Dye Intermediates", "Pigment Emulsions",
+          "Fine Chemicals", "Pharmaceutical Intermediates", "Specialty Solvents",
+          "Laboratory Chemicals", "Biological Stains", "Dehydrated Culture Media",
+          "Analytical Reagents"
         ]
       }
     ]
@@ -40,16 +40,16 @@ const divisions: DivisionData[] = [
       {
         title: "Products",
         items: [
-            "100% Cotton Yarn", "Polyester Cotton Blended Yarn", "Knitted Fabrics",
-            "100% Viscose Spun Yarn", "Polyester Spun Yarn", "Blended Yarns",
-            "Viscose Embroidery Thread", "Trilobal Polyester", "Metallic Yarn",
-            "Recycled Cotton Yarns", "Sustainable Knitting Yarns", "Open End Yarns",
-            "Polyester Filament Yarns (PFY)", "Fully Drawn Yarn (FDY)", "Cotton Yarns",
-            "Technical Textiles", "Bulk Continuous Filament (BCF)", "Industrial Yarns",
-            "Textile Grade Nylon", "Bed Linen", "Bath Linen",
-            "Copier Paper", "Yarn & Chemicals", "Melange Yarn",
-            "Dyed Yarn", "Modal & Lyocell Blends", "Home Textiles",
-            "Jacquard Fabrics", "Faux Silk", "Christmas Ribbons", "Occasion Fabrics"
+          "100% Cotton Yarn", "Polyester Cotton Blended Yarn", "Knitted Fabrics",
+          "100% Viscose Spun Yarn", "Polyester Spun Yarn", "Blended Yarns",
+          "Viscose Embroidery Thread", "Trilobal Polyester", "Metallic Yarn",
+          "Recycled Cotton Yarns", "Sustainable Knitting Yarns", "Open End Yarns",
+          "Polyester Filament Yarns (PFY)", "Fully Drawn Yarn (FDY)", "Cotton Yarns",
+          "Technical Textiles", "Bulk Continuous Filament (BCF)", "Industrial Yarns",
+          "Textile Grade Nylon", "Bed Linen", "Bath Linen",
+          "Copier Paper", "Yarn & Chemicals", "Melange Yarn",
+          "Dyed Yarn", "Modal & Lyocell Blends", "Home Textiles",
+          "Jacquard Fabrics", "Faux Silk", "Christmas Ribbons", "Occasion Fabrics"
         ]
       }
     ]
@@ -59,17 +59,17 @@ const divisions: DivisionData[] = [
     title: "Engineering",
     description: "Delivering precision-engineered components and heavy machinery. Our logistics network ensures safe transport of oversized cargo and sensitive technological equipment.",
     capabilities: ["Precision Machinery", "Automotive Components", "Construction Equipment", "Electrical Fittings"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000", 
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000",
     iconName: "cpu",
     productCategories: [
-        {
-            title: "Products",
-            items: [
-                "Transmission Parts", "Engine Components",
-                "Hydraulic Systems", "Industrial Cranes",
-                "CNC Machined Parts", "Carbide Tools"
-            ]
-        }
+      {
+        title: "Products",
+        items: [
+          "Transmission Parts", "Engine Components",
+          "Hydraulic Systems", "Industrial Cranes",
+          "CNC Machined Parts", "Carbide Tools"
+        ]
+      }
     ]
   }
 ];
@@ -87,7 +87,7 @@ export default function Divisions() {
              <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">Businesses</h2>
           </div>
           <p className="text-neutral-500 max-w-md mt-4 md:mt-0 font-light text-lg">
-             We operate at the intersection of industry and innovation, delivering specialized solutions across three core sectors.
+            We operate at the intersection of industry and innovation, delivering specialized solutions across three core sectors.
           </p>
         </div>
 
@@ -97,11 +97,10 @@ export default function Divisions() {
             <button
               key={div.id}
               onClick={() => setActiveDivision(div.id)}
-              className={`pb-6 text-sm md:text-lg uppercase tracking-widest font-bold transition-all duration-500 relative ${
-                activeDivision === div.id
+              className={`pb-6 text-sm md:text-lg uppercase tracking-widest font-bold transition-all duration-500 relative ${activeDivision === div.id
                   ? 'text-neutral-900'
                   : 'text-neutral-400 hover:text-neutral-600'
-              }`}
+                }`}
             >
               {div.title}
               <span className={`absolute bottom-[-1px] left-0 h-[2px] bg-gold-500 transition-all duration-500 ease-out ${activeDivision === div.id ? 'w-full' : 'w-0'}`}></span>
@@ -111,12 +110,12 @@ export default function Divisions() {
 
         {/* Content Area - Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          
+
           {/* Image Side */}
           <div className="lg:col-span-5 relative h-[500px] lg:h-auto overflow-hidden group reveal">
             <div className="absolute inset-0 bg-neutral-900/10 z-10 transition-opacity duration-500 group-hover:bg-neutral-900/0"></div>
             <img 
-              key={activeData.image} // Key change forces re-render for animation
+              key={activeData.image} 
               src={activeData.image} 
               alt={activeData.title} 
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 animate-fade-in"
@@ -131,7 +130,7 @@ export default function Divisions() {
             <p className="text-xl text-neutral-600 font-light leading-relaxed mb-10 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               {activeData.description}
             </p>
-            
+
             {/* Product Categories List */}
             {activeData.productCategories && (
               <div className="space-y-12 mb-12 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -143,10 +142,10 @@ export default function Divisions() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                       {category.items.map((item, iIdx) => (
                         <div key={iIdx} className="flex items-start gap-3 group">
-                           <CheckCircle2 className="w-4 h-4 text-gold-400 mt-1 flex-shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
-                           <span className="text-neutral-700 font-light text-lg group-hover:text-neutral-900 transition-colors">
-                             {item}
-                           </span>
+                          <CheckCircle2 className="w-4 h-4 text-gold-400 mt-1 flex-shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
+                          <span className="text-neutral-700 font-light text-lg group-hover:text-neutral-900 transition-colors">
+                            {item}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -156,10 +155,10 @@ export default function Divisions() {
             )}
 
             <div className="mt-auto animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-               <button className="group flex items-center gap-3 text-sm uppercase tracking-widest font-bold text-neutral-900 hover:text-gold-600 transition-colors">
-                  View Full Product Catalog
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-               </button>
+              <button className="group flex items-center gap-3 text-sm uppercase tracking-widest font-bold text-neutral-900 hover:text-gold-600 transition-colors">
+                View Full Product Catalog
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
             </div>
           </div>
         </div>
